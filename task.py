@@ -17,3 +17,13 @@ default_args = {
     "retries": 0,
     "retry_delay": timedelta(minutes=5),
 }
+
+dag = DAG("update_sale_statuses", default_args=default_args, schedule_interval='@daily', catchup=False)
+#copy the data to postgresss
+
+def fetch(ds, **kwargs):
+    conn = pg.connect("host=localhost dbname=airflow user=airflow password=airflow")
+    cur = conn.cursor()
+    #cur.copy_from(f, 'sale_statuses', sep=',')
+    conn.commit()
+    f.close()
