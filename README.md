@@ -28,6 +28,6 @@ On the other run `airflow scheduler`
 Runs the airflow  in the browser .<br>
 Open [http://0.0.0.0:8080/admin](http://0.0.0.0:8080/admin) to view it in the browser. 
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+Guess what,this is my welcome page when i visit one my scheduled tasks
+### DAG [craft_tasks] is now fresh as a daisy .<br>
 
